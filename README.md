@@ -43,6 +43,7 @@ Initialization requires 6 parameters, which are all str type:
 | certificate       | Yes  | The public key for the Casdoor application's cert   |
 | org_name | Yes  | Application.organization                                    |
 | application_name | Yes | Application.name |
+| is_stuff | No | Save user attr 'is_stuff' if True |
 
 ```python
 CASDOOR_CONFIG = {
@@ -51,7 +52,8 @@ CASDOOR_CONFIG = {
     'client_secret': '<client-secret>',
     'certificate': '''<certificate>''',
     'org_name': 'built-in',
-    'application_name': 'app-built-in'
+    'application_name': 'app-built-in',
+    'is_stuff': False
 }
 ```
 
@@ -85,4 +87,8 @@ To add a button for using the Casdoor login,  for example:
 <button><a href="{% url 'casdoor_sso' %}">casdoor</a></button>`
 ```
 
-
+## Step4. application settings
+You need select next token fields in the Casdoor:
+ - Name
+ - Email
+ - Password
